@@ -11,10 +11,18 @@ To be determined once it's completed
 
 I installed this in a conda environment on a Fedora 38 system. The PyMC documentation says it's available on conda-forge, so I used a conda virtual enviroment 
 to be consistent with the PyMC documentation and get it working easy. Python 3.11.6 was used.
+On Fedora, I needed to install gcc to solve error saying g++ not detected.
+``` sudo dnf install gcc-c++ ```
+
+WARNING: It is a bit tricky to get a working PyMC Python environment. Also, PyMC tends to have breaking changes fairly often, so this could all be outdated if you try a different version. The course website has some useful PyMC troubleshooting tips:
+https://areding.github.io/6420-pymc/unit6/Unit6-probabilisticprogramming.html
 
 First, create a PyMC python enviroment using the instructions on the PyMC website here: https://www.pymc.io/projects/docs/en/latest/installation.html
 
-Then, install additional required third party libraries using pip.
+I was having some issues getting jupyterlab also installed. I think there is some versioning issue with conda-forge going on at the moment that will hopefully clear up at some point.
+
+Then, install additional required third party libraries using conda. It works best if everything is installed
+with the same python package manager.
 
 ``` pip install -r requirements.txt ```
 
