@@ -2,3 +2,4 @@
 pandas
 watermark
 scikit-learn
+seaborn
